@@ -47,3 +47,4 @@ let g:airline#extensions#tabline#enabled = 1
 
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#branch#use_vcscommand = 1
+let g:airline#extensions#hunks#enabled = 1
