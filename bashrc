@@ -1,7 +1,7 @@
 ##############################################################################
 # Filename: .bashrc #
-# Maintainer: Michael J. Smalley <michaeljsmalley@gmail.com> #
-# URL: http://github.com/michaeljsmalley/dotfiles #
+# Maintainer: Akshay Suthar <akshay.suthar@gmail.com> #
+# URL: http://github.com/akshaysth/dotfiles #
 # #
 # #
 # Sections: #
@@ -15,7 +15,7 @@
 ##############################################################################
 
 # Shell Prompt
-export PS1="\[\e[01;31m\]\u\[\e[0m\]\[\e[00;37m\]@@\[\e[0m\]\[\e[01;37m\]\h\[\e[0m\]\[\e[00;37m\][\w]>\[\e[0m\]"
+export PS1="\[\e[00;31m\]\u\[\e[0m\]\[\e[00;37m\]@\[\e[0m\]\[\e[00;34m\]\h\[\e[0m\]:[\[\e[01;32m\]\w\[\e[0m\]] > "
 
 
 
@@ -28,7 +28,8 @@ export PS1="\[\e[01;31m\]\u\[\e[0m\]\[\e[00;37m\]@@\[\e[0m\]\[\e[01;37m\]\h\[\e[
 ##############################################################################
 
 # Enable colours in "ls" command output
-alias ls="ls -Glah"
+alias ls="ls -Gah --color=auto --group-directories-first"
+alias ll="ls -Glah --color=auto --group-directories-first"
 
 
 
@@ -40,4 +41,4 @@ alias ls="ls -Glah"
 export CLICOLOR=1
 
 #Set 'ls' colours
-expor LSCOLORS=Gxfxcxdxbxegedabagacad
+export LSCOLORS=Gxfxcxdxbxegedabagacad
