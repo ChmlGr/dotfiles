@@ -41,4 +41,4 @@ alias ll="ls -Glah --color=auto --group-directories-first"
 export CLICOLOR=1
 
 #Set 'ls' colours
-export LSCOLORS=Gxfxcxdxbxegedabagacad
+eval $(dircolors -b $HOME/.dir_colors)
