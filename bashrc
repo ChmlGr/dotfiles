@@ -16,10 +16,10 @@
 
 # Shell Prompt
 export PS1="\[\e[00;31m\]\u\[\e[0m\]\[\e[00;37m\]@\[\e[0m\]\[\e[00;34m\]\h\[\e[0m\]:[\[\e[01;32m\]\w\[\e[0m\]] > "
+source ~/dotfiles/shell_prompt.sh
 
 
-
-
+export VAGRANT_CWD="$HOME/vagrant-setup"
 
 
 
@@ -42,3 +42,4 @@ export CLICOLOR=1
 
 #Set 'ls' colours
 eval $(dircolors -b $HOME/.dir_colors)
+
