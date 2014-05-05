@@ -7,9 +7,3 @@
 [submodule "vim/bundle/promptline"]
 	path = vim/bundle/promptline
 	url = https://github.com/edkolev/promptline.vim.git
-[submodule "https:/github.com/vim-scripts/vcscommand.vim.git"]
-	path = https:/github.com/vim-scripts/vcscommand.vim.git
-	url = ./vim/bundle/vcscommand
-[submodule "vim/bundle/vcscommand"]
-	path = vim/bundle/vcscommand
-	url = https://github.com/vim-scripts/vcscommand.vim.git
