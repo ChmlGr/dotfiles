@@ -1,0 +1,55 @@
+###############################################################################
+# International Holiday Data provided by Holidata.net
+# http://holidata.net/en-CA/2014.json
+# http://holidata.net/en-CA/2014.json
+#
+# Copyright 2006-2014, Paul Beckingham, Federico Hernandez.
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included
+# in all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+# OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+# THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+#
+# http://www.opensource.org/licenses/mit-license.php
+#
+###############################################################################
+
+holiday.en-CA1.name=New Year's Day
+holiday.en-CA1.date=20140101
+holiday.en-CA2.name=Family Day
+holiday.en-CA2.date=20140210
+holiday.en-CA3.name=Good Friday
+holiday.en-CA3.date=20140418
+holiday.en-CA4.name=Easter Monday
+holiday.en-CA4.date=20140421
+holiday.en-CA5.name=Victoria Day
+holiday.en-CA5.date=20140519
+holiday.en-CA6.name=Canada Day
+holiday.en-CA6.date=20140701
+holiday.en-CA7.name=First Monday of August
+holiday.en-CA7.date=20140804
+holiday.en-CA8.name=Labour Day
+holiday.en-CA8.date=20140901
+holiday.en-CA9.name=Thanksgiving Day
+holiday.en-CA9.date=20141013
+holiday.en-CA10.name=Remembrance Day
+holiday.en-CA10.date=20141111
+holiday.en-CA11.name=Christmas Day
+holiday.en-CA11.date=20141225
+holiday.en-CA12.name=Boxing Day
+holiday.en-CA12.date=20141226
+holiday.en-CA13.name=New Year's Eve
+holiday.en-CA13.date=20141231

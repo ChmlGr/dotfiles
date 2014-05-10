@@ -34,7 +34,7 @@ calendar.details.report=list
 calendar.holidays=full
 #monthsperline=3
 
-include /usr/local/share/doc/task/rc/holidays.en-CA.rc
+include ~/dotfiles/holidays.en-CA.rc
 
 # Color theme (uncomment one to use)
 #include /usr/local/share/doc/task/rc/light-16.theme
@@ -47,7 +47,7 @@ include /usr/local/share/doc/task/rc/holidays.en-CA.rc
 #include /usr/local/share/doc/task/rc/dark-violets-256.theme
 #include /usr/local/share/doc/task/rc/dark-yellow-green.theme
 #include /usr/local/share/doc/task/rc/dark-gray-256.theme
-include /usr/local/share/doc/task/rc/solarized-dark-256.theme
+include /usr/share/doc/task/rc/solarized-dark-256.theme
 
 alias.a=add
 alias.rm=delete
@@ -84,3 +84,8 @@ default.command=long
 
 
 
+taskd.certificate=\/home\/acet0pgun\/.task\/yogi.cert.pem
+taskd.key=\/home\/acet0pgun\/.task\/yogi.key.pem
+taskd.ca=\/home\/acet0pgun\/.task\/ca.cert.pem
+taskd.server=10.0.100.29:53589
+taskd.credentials=sthdc\/Akshay Suthar\/26d22514-9d31-4b11-89de-8ad4adac41d1
