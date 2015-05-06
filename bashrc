@@ -34,6 +34,8 @@ fi
 # Enable colours in "ls" command output
 alias ls="ls -Gah --color=auto --group-directories-first"
 alias ll="ls -Glah --color=auto --group-directories-first"
+alias boxup="boxfs -f .boxfs/conf"
+
 
 
 
