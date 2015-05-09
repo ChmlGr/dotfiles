@@ -32,10 +32,12 @@ fi
 ##############################################################################
 
 # Enable colours in "ls" command output
-alias ls="ls -Gah --color=auto --group-directories-first"
-alias ll="ls -Glah --color=auto --group-directories-first"
-alias boxup="boxfs -f .boxfs/conf"
-
+alias ls="ls -GahX --color=auto --group-directories-first"
+alias ll="ls -GlahX --color=auto --group-directories-first"
+alias boxup="boxfs -f ~/.boxfs/conf"
+alias pacs="pacaur -Ss"
+alias paci="pacaur -S"
+alias pacu="pacaur -Syyu"
 
 
 
