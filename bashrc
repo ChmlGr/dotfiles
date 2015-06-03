@@ -47,7 +47,7 @@ alias pacu="pacaur -Syyu"
 
 #CLI colours
 export CLICOLOR=1
-
+export MPD_HOST=/home/akshaysth/.mpd/socket
 #Set 'ls' colours
 eval $(dircolors -b $HOME/.dir_colors)
 

@@ -4,6 +4,8 @@
 "# URL: http://github.com/akshaysth/dotfiles #
 "##############################################################################
 
+set encoding=utf-8
+scriptencoding utf-8
 execute pathogen#infect()
 
 set nocompatible          " get rid of Vi compatibility mode. SET FIRST!
@@ -29,10 +31,12 @@ set smarttab              " use tabs at the start of a line, spaces elsewhere
 set nowrap                " don't wrap text
 
 
-set encoding=utf-8
+"let g:Powerline_symbols = 'fancy'
+set guifont=Inconsolata\ for\ Powerline\ 10
 let g:airline_powerline_fonts=1
 let g:airline_detect_paste=1
-let g:airline_theme='murmur'
+"let g:airline_theme='murmur'
+let g:airline_theme='base16'
 
 if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
@@ -49,3 +53,5 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#branch#use_vcscommand = 1
 let g:airline#extensions#hunks#enabled = 1
+"
+"

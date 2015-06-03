@@ -1,0 +1,155 @@
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=99999
+SAVEHIST=5000
+setopt appendhistory autocd extendedglob nomatch notify prompt_subst
+bindkey -e
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/akshaysth/.zshrc'
+
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+. ~/.zsh/git-prompt/git-prompt.zsh
+autoload -U compinit promptinit colors 
+compinit
+promptinit
+colors
+
+
+
+# for linux console and RH/Debian xterm
+bindkey "\e[1~" beginning-of-line
+bindkey "\e[4~" end-of-line
+bindkey "\e[5~" beginning-of-history
+bindkey "\e[6~" end-of-history
+bindkey "\e[7~" beginning-of-line
+bindkey "\e[3~" delete-char
+bindkey "\e[2~" quoted-insert
+bindkey "\e[5C" forward-word
+bindkey "\e[5D" backward-word
+bindkey "\e\e[C" forward-word
+bindkey "\e\e[D" backward-word
+bindkey "\e[1;5C" forward-word
+bindkey "\e[1;5D" backward-word
+
+# Show Git branch/tag, or name-rev if on detached head
+parse_git_branch() {
+  (git symbolic-ref -q HEAD || git name-rev --name-only --no-undefined --always HEAD) 2> /dev/null
+}
+
+# Show different symbols as appropriate for various Git repository states
+parse_git_state() {
+
+  # Compose this value via multiple conditional appends.
+  local GIT_STATE=""
+
+  local NUM_AHEAD="$(git log --oneline @{u}.. 2> /dev/null | wc -l | tr -d ' ')"
+  if [ "$NUM_AHEAD" -gt 0 ]; then
+    GIT_STATE=$GIT_STATE${GIT_PROMPT_AHEAD//NUM/$NUM_AHEAD}
+  fi
+
+  local NUM_BEHIND="$(git log --oneline ..@{u} 2> /dev/null | wc -l | tr -d ' ')"
+  if [ "$NUM_BEHIND" -gt 0 ]; then
+    GIT_STATE=$GIT_STATE${GIT_PROMPT_BEHIND//NUM/$NUM_BEHIND}
+  fi
+
+  local GIT_DIR="$(git rev-parse --git-dir 2> /dev/null)"
+  if [ -n $GIT_DIR ] && test -r $GIT_DIR/MERGE_HEAD; then
+    GIT_STATE=$GIT_STATE$GIT_PROMPT_MERGING
+  fi
+
+  if [[ -n $(git ls-files --other --exclude-standard 2> /dev/null) ]]; then
+    GIT_STATE=$GIT_STATE$GIT_PROMPT_UNTRACKED
+  fi
+
+  if ! git diff --quiet 2> /dev/null; then
+    GIT_STATE=$GIT_STATE$GIT_PROMPT_MODIFIED
+  fi
+
+  if ! git diff --cached --quiet 2> /dev/null; then
+    GIT_STATE=$GIT_STATE$GIT_PROMPT_STAGED
+  fi
+
+  if [[ -n $GIT_STATE ]]; then
+    echo "$GIT_PROMPT_PREFIX$GIT_STATE$GIT_PROMPT_SUFFIX"
+  fi
+
+}
+
+# If inside a Git repository, print its branch and state
+git_prompt_string() {
+  local git_where="$(parse_git_branch)"
+  [ -n "$git_where" ] && echo "$GIT_PROMPT_SYMBOL$(parse_git_state)$GIT_PROMPT_PREFIX%{$fg[yellow]%}${git_where#(refs/heads/|tags/)}$GIT_PROMPT_SUFFIX"
+}
+
+PROMPT="
+%{$fg[magenta]%}%n%{$reset_color%} at %{$fg[yellow]%}%m%{$reset_color%} %{$fg[blue]%}➔➤%{$reset_color%} "
+#PROMPT="
+#%{$fg[red]%} »  %{$reset_color%}"
+#PROMPT="
+##%{$fg[red]%} >  %{$reset_color%}"
+RPROMPT="%B%{$fg[green]%}%~%{$reset_color%} $(git_prompt_string)"
+
+
+
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' list-colors 'reply=( "=(#b)(*$VAR)(?)*=00=$color[green]=$color[bg-green]" )'
+zstyle ':completion:*:*:*:*:hosts' list-colors '=*=30;41'
+zstyle ':completion:*:*:*:*:users' list-colors '=*=$color[green]=$color[red]'
+zstyle ':completion:*' menu select
+
+conf() {
+	case $1 in
+		xmonad)		vim ~/.xmonad/xmonad.hs ;;
+		bspwm)		vim ~/.config/bspwm/bspwmrc ;;
+		sxhkd)		vim ~/.config/sxhkd/sxhkdrc ;;
+		conky)		vim ~/.xmonad/.conky_dzen ;;
+		homepage)	olddir=$(pwd) && cd ~/scripts/homepage.py && vim homepage.py && ./homepage.py; cd $olddir ;;
+		menu)		vim ~/scripts/menu ;;
+		mpd)		vim ~/.mpdconf ;;
+		mutt)		vim ~/.mutt/acct/wei001 ;;
+		ncmpcpp)	vim ~/.ncmpcpp/config ;;
+		pacman)		svim /etc/pacman.conf ;;
+		ranger)		vim ~/.config/ranger/rc.conf ;;
+		rifle)		vim ~/.config/ranger/rifle.conf ;;
+		tmux)		vim ~/.tmux.conf ;;
+		vim)		vim ~/.vimrc ;;
+		xinit)		vim ~/.xinitrc ;;
+		xresources)	vim ~/.Xresources && xrdb ~/.Xresources ;;
+		zathura)	vim ~/.config/zathura/zathurarc ;;
+		theme2)		vim ~/.themes/FlatStudioCustom/gtk-2.0/gtkrc ;;
+		theme3)		vim ~/.themes/FlatStudioCustom/gtk-3.0/gtk.css ;;
+		gtk2)		vim ~/.gtkrc-2.0 ;;
+		gtk3)		vim ~/.config/gtk-3.0/settings.ini ;;
+		tint2)		vim ~/.config/tint2/xmonad.tint2rc ;;
+		zsh)		vim ~/.zshrc && source ~/.zshrc ;;
+		hosts)		sudoedit /etc/hosts ;;
+		vhosts)		sudoedit /etc/httpd/conf/extra/httpd-vhosts.conf ;;
+		httpd)		sudoedit /etc/httpd/conf/httpd.conf ;;
+		*)			echo "Unknown application: $1" ;;
+	esac
+}
+
+
+
+alias ls="ls -GahX --color=auto --group-directories-first"
+alias ll="ls -GlahX --color=auto --group-directories-first"
+alias boxup="boxfs -f ~/.boxfs/conf"
+alias pacs="pacaur -Ss"
+alias paci="pacaur -S"
+alias pacu="pacaur -Syyu"
+
+
+
+
+pathdirs=(
+    ~/scripts
+)
+for dir in $pathdirs; do
+    if [ -d $dir ]; then
+        path+=$dir
+    fi
+done
+
+export LSCOLORS=exfxcxdxbxegedabagacad
+export MPD_HOST=/home/akshaysth/.mpd/socket
