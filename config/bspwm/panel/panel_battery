@@ -1,0 +1,6 @@
+#!/bin/bash
+
+source $(dirname $0)/config
+
+BATTERY=$(~/scripts/battery.sh)
+echo "%{F$BAT_COLOR}$(printf '%b' "\ue041")%{F-} $BATTERY $DIV"

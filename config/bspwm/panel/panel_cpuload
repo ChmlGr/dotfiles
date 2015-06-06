@@ -1,0 +1,7 @@
+#!/bin/bash
+source $(dirname $0)/config
+
+CPULOAD=$(./cpu)
+output="%{F$COLOR_ICON} %{F-}$CPULOAD"
+
+echo $output $DIV;

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+source $(dirname $0)/config
+
+NAME=$(iwconfig wlan0 | grep 'ESSID:' | awk '{print $4}' | sed 's/ESSID://g' | sed 's/"//g')
+if [ "$NAME" == "off/any" ]; then
+    echo "%{F$RED_COLOR}$(printf '%b' "\ue048")%{F-} no conn $DIV"
+else 
+    echo "%{F$WIFI_COLOR}$(printf '%b' "\ue048")%{F-} $NAME $DIV"
+fi

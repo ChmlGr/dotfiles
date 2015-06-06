@@ -1,0 +1,6 @@
+#!/bin/bash
+
+source $(dirname $0)/config
+
+STATUS=$(mpc current)
+echo "%{F$GREEN_COLOR A:mpc toggle: A3:mpc stop:}$(printf '%b' "\ue05c")%{F-} $STATUS%{A A} $DIV"
