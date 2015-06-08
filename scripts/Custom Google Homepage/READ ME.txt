@@ -1,0 +1,44 @@
+© 2014 Jlynn - Custom Google Homepage (Version 1.01)
+http://neon-ink.net/ 
+http://jlynnxx.deviantart.com/
+
+Do no redistribute!
+Downloads are only available at the given websites above, redistributing is a violation to copyright.
+edit at your own risk!!!
+
+Custom Google Homepage comes it 2 options, with google services toolbar (Home.html), and without the 
+toolbar (Home2.html).
+
+-----------------------------------------------------------------------------------------------------
+
+HOW TO CHANGE YOUR BROWSERS HOMEPAGE:
+
+1. follow instructions given from this website:   http://www.computerhope.com/issues/ch000577.htm
+
+-----------------------------------------------------------------------------------------------------
+
+HOW TO CHANGE THE BACKGROUND:
+
+1. First find an image you want to use. I recommend using desktop wallpapers because they will fit 
+the full window without the awkward tile effect. Try searching http://www.goodfon.su/
+2. When you find an image online, right click > copy image URL
+3. If your using an image that is already saved onto your computer, copy the direct file path which 
+should start from your harddrive and end with a .jpg or .png 
+for example:   C:\Users\Jlynn\Documents\Custom Google\Images\2560x1600.jpg
+4. In the Custom Google Homepage folder, find the file that says 'Stylesheet' and open it in a notepad!
+5. Find the 2nd line that says:   background:url(Images/1920x1200.jpg)
+6. Paste either the image URL link or file path between the parenthesis, then save and refresh your
+browser homepage.
+
+* Using lower quality or smaller images will decrease the load time of the background.
+
+
+-----------------------------------------------------------------------------------------------------
+
+HOW TO CHANGE THE 'GOOGLE' HEADER FONT:
+
+1. Find a font on your computer you want to use.
+2. In the Custom Google Homepage folder, find the file that says 'Stylesheet' and open it in a notepad!
+3. Find the 9th line below h1 that says:   font-family:Brannboll fet;
+4. after  font-family:  write the exact font name but be sure to include the semi-colon after the font 
+name, then save the stylesheet, and refresh your browser homepage.
