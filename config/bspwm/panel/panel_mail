@@ -1,0 +1,6 @@
+#!/bin/bash
+
+source $(dirname $0)/config
+
+MAIL=$(~/scripts/mail.sh)
+echo "%{F$GREEN_COLOR}$(printf '%b' "\ue123")%{F-} $MAIL $DIV"

@@ -1,0 +1,10 @@
+short_units yes
+background yes
+out_to_console yes
+out_to_x no
+# Update interval in seconds
+update_interval 3
+
+TEXT
+S${execi 1 ./panel_mail} ${execi 1 ./panel_mpd} ${execi 1 ./panel_network} ${execi 1 ./panel_ssid} ${execi 1 ./panel_ram} ${execi 1 ./panel_cpuload} ${execi 1 ./panel_temperature} ${execi 1 ./panel_pacman} ${execi 1 ./panel_volume} ${execi 1 ./panel_battery} ${time %I:%M %P}   %{-u}
+

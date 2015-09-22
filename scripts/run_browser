@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Script to open Browser instances in tabbed
+
+exec vimb -e $(</tmp/tabbed.xid) "$1" &
