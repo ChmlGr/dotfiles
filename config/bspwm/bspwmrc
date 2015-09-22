@@ -1,7 +1,7 @@
 #! /bin/sh
 
 bspc config border_width        1
-bspc config window_gap         10
+bspc config window_gap         5
 bspc config top_padding        26
 bspc config left_padding       0
 bspc config split_ratio         0.50
@@ -30,8 +30,8 @@ bspc rule -a ranger desktop=^4
 
 ## autostart
 #unclutter -root -idle 1 &
-#feh --bg-scale /home/akshaysth/Pictures/sydney_opera_house.jpg &
-feh --bg-scale /home/akshaysth/Pictures/sea_coast_excitement_cloudy_clouds_bad_weather_foam_52140_2560x1600.jpg &
+feh --bg-scale /home/akshaysth/Pictures/wallhaven-25150.jpg &
+#feh --bg-scale /home/akshaysth/Pictures/sea_coast_excitement_cloudy_clouds_bad_weather_foam_52140_2560x1600.jpg &
 compton --vsync opengl-swc --shadow-exclude 'n:a:Conky' -b &
 redshift &
 # conky &

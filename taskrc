@@ -10,12 +10,20 @@
 
 # Use the command 'task show' to see all defaults and overrides
 
+# Inthe.AM taskserver config
+taskd.certificate=~/.task/private.certificate.pem
+taskd.key=~/.task/private.key.pem
+taskd.ca=~/.task/ca.cert.pem
+taskd.server=taskwarrior.inthe.am:53589
+taskd.credentials=inthe_am/akshay.suthar/92e2522d-efa8-4d23-93da-2429ff1572c4
+taskd.trust=ignore hostname
+
 # Files
 data.location=~/.task
 
 # Terminal
 #curses=on
-defaultwidth=100
+defaultwidth=150
 editor=vim
 
 # Miscellaneous
@@ -51,7 +59,8 @@ include /usr/share/doc/task/rc/holidays.en-CA.rc
 #include /usr/share/doc/task/rc/dark-gray-256.theme
 #include /usr/share/doc/task/rc/solarized-dark-256.theme
 #include /usr/share/doc/task/rc/solarized-light-256.theme
-include ~/dotfiles/dark-16.theme
+#include ~/dotfiles/dark-16.theme
+include ~/dotfiles/dark-red-256.theme
 
 alias.a=add
 alias.rm=delete
@@ -74,13 +83,14 @@ report.today.labels=ID,Proj,Pri,Due,Tags,Description & Annotation
 report.today.sort=due+,priority-,project+
 report.today.filter=status:pending '( scheduled.before:tomorrow or due.before:tom )'
 report.today.dateformat=b.D
+report.long.sort=priority-
+report.long.labels=ID,Proj,Pri,Due,Urg,Description
+report.long.columns=id,project,priority,due,urgency,description
+report.next.sort=priority-
 
 
 
-
-
-
-default.command=list
+default.command=next
 
 
 

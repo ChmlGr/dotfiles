@@ -7,6 +7,9 @@ export ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="akshaysth"
 
+HISTFILE=~/.histfile
+HISTSIZE=99999
+SAVEHIST=5000
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -107,19 +110,23 @@ conf() {
 		hosts)		sudoedit /etc/hosts ;;
 		vhosts)		sudoedit /etc/httpd/conf/extra/httpd-vhosts.conf ;;
 		httpd)		sudoedit /etc/httpd/conf/httpd.conf ;;
-		*)			echo "Unknown application: $1" ;;
+        offlineimap) vim ~/.offlineimaprc;;
+        gpg)        vim ~/.gnupg/gpg.conf;;
+        task)       vim ~/.taskrc;;
+        newsbeuter) vim ~/.newsbeuter/urls;;
+        *)			echo "Unknown application: $1" ;;
 	esac
 }
 
 
 
-alias ls="ls -GahX --color=auto --group-directories-first"
-alias ll="ls -GlahX --color=auto --group-directories-first"
+alias ls="ls -ahX --color=auto --group-directories-first"
+alias ll="ls -lahX --color=auto --group-directories-first"
 alias boxup="boxfs -f ~/.boxfs/conf"
 alias pacs="pacaur -Ss"
 alias paci="pacaur -S"
 alias pacu="pacaur -Syyu"
-
+alias clock="tty-clock -C1 -c -s"
 
 
 
