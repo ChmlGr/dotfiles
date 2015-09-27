@@ -110,15 +110,17 @@ super + ctrl + {h,j,k,l}
 super + Return
 	xfce4-terminal
 
-super + control + f
-	firefox
+XF86HomePage	
+    firefox
 
 super + control + m
 	{urxvt -name mutt -e mutt}
 
 super + r
-	{urxvt -name ranger -e ranger}
+	{xterm -name ranger -e ranger}
 
+super + t
+    thunar
 #super + {F3,F2}
 #  {amixer sset Master playback 5%+,amixer sset Master playback 5%-}
 
@@ -143,11 +145,17 @@ XF86AudioLowerVolume
 XF86AudioMute
     amixer set Master toggle
 
+XF86AudioMicMute
+    amixer set Capture toggle
+
 XF86MonBrightnessUp
     xbacklight -inc 5
 
 XF86MonBrightnessDown
     xbacklight -dec 5
+
+XF86Calculator
+    gnome-calculator
 
 super + alt + l
     i3lock-fancy

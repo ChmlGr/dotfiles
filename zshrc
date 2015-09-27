@@ -114,6 +114,8 @@ conf() {
         gpg)        vim ~/.gnupg/gpg.conf;;
         task)       vim ~/.taskrc;;
         newsbeuter) vim ~/.newsbeuter/urls;;
+        compton)    vim ~/.compton.conf;;
+        dunst)      vim ~/.config/dunst/dunstrc;;
         *)			echo "Unknown application: $1" ;;
 	esac
 }
