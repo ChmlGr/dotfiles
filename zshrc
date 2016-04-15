@@ -145,3 +145,9 @@ export LSCOLORS=exfxcxdxbxegedabagacad
 export MPD_HOST=/home/akshaysth/.mpd/socket
 
 export TERM=xterm-256color
+export EDITOR=vim
+
+synclient HorizTwoFingerScroll=1
+synclient TapButton2=3
+synclient TapButton3=2
+synclient PalmDetect=1
